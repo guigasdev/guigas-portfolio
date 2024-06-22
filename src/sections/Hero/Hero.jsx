@@ -28,10 +28,10 @@ function Hero() {
                 alt="Profile picture of Guilherme" 
             />
             <img
+                className={styles.colorMode}
                 src={themeIcon}
                 alt="Color mode icon"
-                className={styles.colorMode}
-                onClick={toggleTheme} 
+                onClick={toggleTheme}
              />
         </div>
         <div className={styles.info}>
