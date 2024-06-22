@@ -1,6 +1,7 @@
 import './App.css';
 import Hero from './sections/Hero/Hero';
 import { useTranslation } from 'react-i18next';
+import Projects from './sections/Projects/Projects';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
       <Hero />
+      <Projects />
     </>
   );
 }
