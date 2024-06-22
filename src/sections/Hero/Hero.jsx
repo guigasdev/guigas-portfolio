@@ -8,7 +8,7 @@ import githubLight from '../../assets/github-light.svg';
 import githubDark from '../../assets/github-dark.svg';
 import linkedinLight from '../../assets/linkedin-light.svg';
 import linkedinDark from '../../assets/linkedin-dark.svg';
-import CV from '../../assets/curriculo-versao-final-guilherme.pdf'
+import CV from '../../assets/curriculo.pdf'
 import { useTheme } from '../../common/ThemeContext';
 
 function Hero() {
@@ -48,11 +48,11 @@ function Hero() {
                 
             </span>
             <p className={styles.description}>
-                With a passion for Software Development and technology, I hope can help you with you need, contact-me!
+                Tenho paixão por programação e tecnologia, sobretudo, desenvolvimento backend, espero que possa te ajudar, entre em contato comigo!
             </p>
             <a href={CV} download>
                 <button className='hover'>
-                    Resume
+                    Currículo
                 </button>
             </a>
         </div>
