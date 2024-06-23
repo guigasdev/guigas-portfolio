@@ -14,19 +14,13 @@ function Projects() {
             src={arduinoRobot}
             link={'https://github.com/guigasdev/arduino-robot'}
             h3={'Robô Arduíno'}
-            p={'Controle Bluetooth, Seguidor de Linha e Sensor Ultrassônico'}
+            p={`Seguidor, Bluetooth, Ultrassônico`}
         />
          < ProjectCard
             src={bakeCard}
             link={'https://github.com/guigasdev/backend_padaria'}
             h3={'Sistema CRUD para Padaria '}
             p={'Cread, Read, Update e Delete'}
-        />
-         < ProjectCard
-            src={greenstepCard}
-            link={'https://github.com/guigasdev/greenstep'}
-            h3={'Aplicativo GreenStep'}
-            p={'Sustentabilidade, Reciclagem e Biodiversidade'}
         />
           < ProjectCard
             src={zabuCard}
