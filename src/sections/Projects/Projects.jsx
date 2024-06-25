@@ -30,7 +30,7 @@ function Projects() {
         />
             < ProjectCard
             src={recipeCard}
-            link={'https://github.com/guigasdev/zabu-bot-discord'}
+            link={'https://github.com/guigasdev/django-project-course'}
             h3={'Site de Receitas'}
             p={'Criação, edição, comentários e avaliações de receitas.'}
         />
