@@ -53,7 +53,7 @@ function Hero() {
           </a>
         </span>
         <p className={styles.description}>
-        Tenho paixão por programação e tecnologia, sobretudo, desenvolvimento backend, espero que possa te ajudar, entre em contato comigo!
+        Tenho paixão por programação e tecnologia, sobretudo, desenvolvimento web, acredito que possa te ajudar, entre em contato comigo! 
         </p>
         <a href={CV} download>
           <button className="hover">Currículo</button>

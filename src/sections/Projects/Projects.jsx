@@ -4,6 +4,8 @@ import ProjectCard from '../../common/ProjectCard';
 import bakeCard from '../../assets/bake-cartoon-crud.jpg'
 import recipeCard from '../../assets/recipe-website-logo.jpg'
 import zabuCard from '../../assets/zabu-logo.png'
+import listaCard from '../../assets/image.png'
+
 
 function Projects() {
   return (
@@ -17,10 +19,10 @@ function Projects() {
             p={`Seguidor, Bluetooth, Ultrassônico.`}
         />
          < ProjectCard
-            src={bakeCard}
-            link={'https://github.com/guigasdev/backend_padaria'}
-            h3={'Sistema CRUD para Padaria '}
-            p={'Crie, Leia, Atualize e Delete'}
+            src={listaCard}
+            link={'https://www.listagreen.com.br'}
+            h3={'Comunidade Lista Green'}
+            p={'A primeira plataforma brasileira 100% dedicada a promover a economia verde em todo o nosso país!'}
         />
           < ProjectCard
             src={zabuCard}
@@ -34,6 +36,13 @@ function Projects() {
             h3={'Site de Receitas'}
             p={'Criação, edição, comentários e avaliações de receitas.'}
         />
+            < ProjectCard
+              src={bakeCard}
+              link={'https://github.com/guigasdev/backend_padaria'}
+              h3={'Sistema CRUD para Padaria '}
+              p={'Crie, Leia, Atualize e Delete'}
+          />
+          
         </div>
     </section>
   )
