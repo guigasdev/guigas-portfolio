@@ -1,5 +1,6 @@
 import heroImg from '../../assets/guigas-icon.jpg';
 import CV from '../../assets/curriculo.pdf';
+import CVen from '../../assets/curriculo.pdf';
 import { useTheme } from '../../common/ThemeContext';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Sun, Moon, FileDown } from 'lucide-react';
@@ -60,7 +61,8 @@ function Hero() {
         <p className="max-w-xl text-slate-300">{t('hero.blurb')}</p>
 
         <div className="flex items-center gap-3">
-          <a href={CV} download className="btn">
+          <a href={(t && typeof t === 'function' && (/* noop */ true)) ? ( ( ( ) => null) ) : undefined} className="hidden"></a>
+          <a href={ ( (lang) => lang === 'en' ? CVen : CV)( (typeof window !== 'undefined' && window.localStorage.getItem('i18nextLng')) || 'pt') } download className="btn">
             <FileDown className="mr-2" size={18} /> {t('buttons.downloadCV')}
           </a>
           <a href="#contact" className="rounded-md border border-white/10 px-4 py-2 text-slate-200 transition hover:border-primary-500 hover:text-primary-400">{t('buttons.contactMe')}</a>

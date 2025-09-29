@@ -5,6 +5,7 @@ import bakeCard from '../../assets/bake-cartoon-crud.jpg'
 import recipeCard from '../../assets/recipe-website-logo.jpg'
 import zabuCard from '../../assets/zabu-logo.png'
 import listaCard from '../../assets/image.png'
+import visionqa from '../../assets/visionqa.jpg'
 import { useTranslation } from 'react-i18next'
 
 function Projects() {
@@ -29,6 +30,13 @@ function Projects() {
           h3={P.listagreen.title}
           p={P.listagreen.desc}
           tech={P.listagreen.tech}
+        />
+        <ProjectCard
+          src={visionqa}
+          link={'https://github.com/guigasdev/VisionQA'}
+          h3={P.visionqa.title}
+          p={P.visionqa.desc}
+          tech={P.visionqa.tech}
         />
         <ProjectCard
           src={zabuCard}

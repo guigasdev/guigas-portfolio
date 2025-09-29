@@ -25,35 +25,34 @@ const resources = {
         zabu: { title: 'Zabu Assistente de Discord', desc: 'Moderação, Assistência, Comandos.', tech: ['Python', 'Discord.py', 'Docker'] },
         recipes: { title: 'Site de Receitas', desc: 'Criação, edição, comentários e avaliações de receitas.', tech: ['Django', 'PostgreSQL'] },
         bakery: { title: 'Sistema CRUD para Padaria ', desc: 'Crie, Leia, Atualize e Delete', tech: ['Java', 'Spring', 'MySQL'] },
+        visionqa: { title: 'VisionQA', desc: 'Pipeline de OCR com IA no Azure: faça upload de imagens ou texto e obtenha respostas instantâneas.', tech: ['Azure', 'OCR', 'AI', 'Terraform', 'IaC', 'CI/CD', 'Full-Stack'] }
       },
       experience: {
         title: 'Experiências',
         items: [
           {
-            company: 'Empresa X', role: 'Cloud Architect', period: '2023 — Atual',
+            company: 'Lanlink', role: 'Cloud Architecture', period: '11/2024 — Atual',
             bullets: [
-              'Desenho de arquitetura em AWS/Azure/GCP com foco em segurança e custo',
-              'Adoção de IaC (Terraform) e pipelines CI/CD (GitHub Actions)'
+              'Desenho de arquitetura em Azure/OCI com foco em segurança e custo',
+              'Adoção de IaC (Terraform) e pipelines CI/CD (GitHub Actions)',
+              'Apoio ao time de arquitetura de soluções, garantindo alinhamento entre requisitos técnicos e comerciais',
+              'Elaboração de propostas técnicas de baixa complexidade e alto volume em segurança da informação e infraestrutura de T.I.',
+              'Integração de soluções para ambientes on-premise, nuvens privadas e públicas',
+              'Trabalhos com tecnologias líderes como Microsoft, Oracle, VMware e Veeam',
+              'Colaboração interdepartamental com clientes, equipe comercial e técnica',
+              'Análise técnica de requisitos para propor arquiteturas de soluções alinhadas aos objetivos organizacionais'
             ],
           },
-          {
-            company: 'Empresa Y', role: 'DevOps Engineer', period: '2021 — 2023',
-            bullets: [
-              'Observabilidade com Prometheus/Grafana e práticas SRE',
-              'Automação de deploy com Kubernetes e ArgoCD'
-            ],
-          }
+
         ]
       },
       certifications: {
         title: 'Certificações',
         blurb: 'Principais certificações em Cloud e DevOps.',
         items: [
-          { name: 'AWS Certified Solutions Architect – Associate', org: 'AWS', year: '2024', url: 'https://www.credly.com/' },
-          { name: 'Azure Administrator Associate (AZ-104)', org: 'Microsoft', year: '2023', url: 'https://learn.microsoft.com/' },
-          { name: 'Oracle Cloud Infrastructure Architect Associate', org: 'Oracle', year: '2023', url: 'https://education.oracle.com/' },
-          { name: 'CKA – Certified Kubernetes Administrator', org: 'CNCF', year: '2024', url: 'https://training.linuxfoundation.org/' },
-          { name: 'Docker Certified Associate', org: 'Docker', year: '2022', url: 'https://success.docker.com/certification' },
+          { name: 'Oracle Cloud Infrastructure Foundations Associate', org: 'Oracle', year: '2025', url: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=FCEE8273535928A350E98E77110502D5D61C051761BEA2CAA7A26A6A839EC1C2' },
+          { name: 'Watsonx.AI Generative AI Foundations', org: 'IBM', year: '2025', url: 'https://www.credly.com/badges/2d4089f4-c7c2-4168-aeea-2104f40507e0' },
+          { name: 'Oracle Cloud Infrastructure Architect Associate', org: 'Oracle', year: '2025', url: 'https://soon...' },
         ]
       },
       skills: {
@@ -61,10 +60,10 @@ const resources = {
         categories: [
           { title: 'Cloud', items: ['AWS', 'Azure', 'OCI', 'GCP'] },
           { title: 'IaC & Config', items: ['Terraform', 'CloudFormation', 'Ansible'] },
-          { title: 'CI/CD', items: ['GitHub Actions', 'GitLab CI', 'Jenkins', 'ArgoCD'] },
-          { title: 'Containers & Orquestração', items: ['Docker', 'Kubernetes', 'Helm'] },
-          { title: 'Observabilidade', items: ['Prometheus', 'Grafana', 'ELK/OpenSearch'] },
-          { title: 'Linguagens', items: ['Python', 'JavaScript/TypeScript', 'Go (básico)'] },
+          { title: 'CI/CD', items: ['GitHub Actions', 'Jenkins', 'Azure DevOps'] },
+          { title: 'Containers & Orquestração', items: ['Docker', 'Kubernetes'] },
+          { title: 'Observabilidade', items: ['Zabbix'] },
+          { title: 'Linguagens', items: ['Python', 'JavaScript/TypeScript', 'Java'] },
         ]
       },
       contact: {
@@ -104,35 +103,33 @@ const resources = {
         zabu: { title: 'Zabu Discord Assistant', desc: 'Moderation, Assistance, Commands.', tech: ['Python', 'Discord.py', 'Docker'] },
         recipes: { title: 'Recipe Website', desc: 'Create, edit, comment and rate recipes.', tech: ['Django', 'PostgreSQL'] },
         bakery: { title: 'Bakery CRUD System', desc: 'Create, Read, Update and Delete', tech: ['Java', 'Spring', 'MySQL'] },
+        visionqa: { title: 'VisionQA', desc: 'AI-powered OCR pipeline on Azure: upload images or text and get instant answers.', tech: ['Azure', 'OCR', 'AI', 'Terraform', 'IaC', 'CI/CD', 'Full-Stack'] },
       },
       experience: {
         title: 'Experience',
         items: [
           {
-            company: 'Company X', role: 'Cloud Architect', period: '2023 — Present',
+            company: 'Lanlink', role: 'Cloud Architecture', period: '11/2024 — Present',
             bullets: [
-              'Architecting on AWS/Azure/GCP focusing on security and cost',
-              'Adoption of IaC (Terraform) and CI/CD pipelines (GitHub Actions)'
+              'Architecting on Azure/OCI focusing on security and cost',
+              'Adoption of IaC (Terraform) and CI/CD pipelines (GitHub Actions)',
+              'Support to the solutions architecture team, ensuring alignment between technical and business requirements',
+              'Development of high-volume, low-complexity technical proposals in information security and IT infrastructure',
+              'Integration of solutions across on-premise, private, and public cloud environments',
+              'Hands-on experience with leading technologies such as Microsoft, Oracle, VMware, and Veeam',
+              'Cross-department collaboration with clients, sales, and technical teams',
+              'Technical requirements analysis to propose solution architectures aligned with organizational goals'
             ],
           },
-          {
-            company: 'Company Y', role: 'DevOps Engineer', period: '2021 — 2023',
-            bullets: [
-              'Observability with Prometheus/Grafana and SRE practices',
-              'Automated deployments with Kubernetes and ArgoCD'
-            ],
-          }
         ]
       },
       certifications: {
         title: 'Certifications',
         blurb: 'Key Cloud and DevOps certifications.',
         items: [
-          { name: 'AWS Certified Solutions Architect – Associate', org: 'AWS', year: '2024', url: 'https://www.credly.com/' },
-          { name: 'Azure Administrator Associate (AZ-104)', org: 'Microsoft', year: '2023', url: 'https://learn.microsoft.com/' },
-          { name: 'Oracle Cloud Infrastructure Architect Associate', org: 'Oracle', year: '2023', url: 'https://education.oracle.com/' },
-          { name: 'CKA – Certified Kubernetes Administrator', org: 'CNCF', year: '2024', url: 'https://training.linuxfoundation.org/' },
-          { name: 'Docker Certified Associate', org: 'Docker', year: '2022', url: 'https://success.docker.com/certification' },
+          { name: 'Oracle Cloud Infrastructure Foundations Associate', org: 'Oracle', year: '2025', url: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=FCEE8273535928A350E98E77110502D5D61C051761BEA2CAA7A26A6A839EC1C2' },
+          { name: 'Watsonx.AI Generative AI Foundations', org: 'IBM', year: '2025', url: 'https://www.credly.com/badges/2d4089f4-c7c2-4168-aeea-2104f40507e0' },
+          { name: 'Oracle Cloud Infrastructure Architect Associate', org: 'Oracle', year: '2025', url: 'https://soon...' },
         ]
       },
       skills: {
@@ -140,10 +137,10 @@ const resources = {
         categories: [
           { title: 'Cloud', items: ['AWS', 'Azure', 'OCI', 'GCP'] },
           { title: 'IaC & Config', items: ['Terraform', 'CloudFormation', 'Ansible'] },
-          { title: 'CI/CD', items: ['GitHub Actions', 'GitLab CI', 'Jenkins', 'ArgoCD'] },
-          { title: 'Containers & Orchestration', items: ['Docker', 'Kubernetes', 'Helm'] },
-          { title: 'Observability', items: ['Prometheus', 'Grafana', 'ELK/OpenSearch'] },
-          { title: 'Languages', items: ['Python', 'JavaScript/TypeScript', 'Go (basic)'] },
+          { title: 'CI/CD', items: ['GitHub Actions', 'Jenkins', 'Azure DevOps'] },
+          { title: 'Containers & Orquestração', items: ['Docker', 'Kubernetes'] },
+          { title: 'Observabilidade', items: ['Zabbix'] },
+          { title: 'Linguagens', items: ['Python', 'JavaScript/TypeScript', 'Java'] },
         ]
       },
       contact: {

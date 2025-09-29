@@ -28,6 +28,8 @@ function ProjectCard({ src, link, h3, p, tech = [], site }) {
           src={src}
           alt={`${h3} logo`}
           className="max-h-full max-w-full object-contain"
+          loading="lazy"
+          decoding="async"
           initial={false}
           animate={{ scale: hover ? 1.02 : 1 }}
           transition={{ type: 'spring', stiffness: 260, damping: 20 }}
@@ -81,14 +83,14 @@ function ProjectCard({ src, link, h3, p, tech = [], site }) {
         )}
       </AnimatePresence>
     </motion.div>
-    <Modal open={open} onClose={() => setOpen(false)}>
+    <Modal open={open} onClose={() => setOpen(false)} labelledBy='project-modal-title'>
       <div className='flex flex-col gap-4 md:flex-row'>
         <div className='flex h-64 w-full items-center justify-center overflow-hidden rounded-lg md:h-72 md:w-96 bg-transparent'>
           <img src={src} alt={`${h3} image`} className='max-h-full max-w-full object-contain' />
         </div>
         <div className='flex-1'>
           <div className='mb-2 flex items-center justify-between'>
-            <h3 className='font-display text-xl font-bold text-slate-100'>{h3}</h3>
+            <h3 id='project-modal-title' className='font-display text-xl font-bold text-slate-100'>{h3}</h3>
             <div className='flex items-center gap-2'>
               {link && (
                 <a href={link} target='_blank' rel='noreferrer' className='rounded-md border border-white/10 px-2 py-1 text-slate-300 hover:border-primary-500 hover:text-primary-400'>

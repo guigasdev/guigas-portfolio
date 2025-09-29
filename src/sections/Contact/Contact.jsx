@@ -10,7 +10,7 @@ function Contact() {
       <p className="mx-auto mb-4 max-w-2xl px-6 text-slate-700 dark:text-slate-300">{t('contact.blurb')}</p>
       <div className="mb-6 flex justify-center">
         <a
-          href="https://wa.me/5599999999999"
+          href="https://wa.me/5585992433782"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2 rounded-md border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-emerald-700 transition hover:border-emerald-500 hover:bg-emerald-500/20 dark:border-emerald-400/30 dark:text-emerald-300"
