@@ -1,4 +1,4 @@
-import heroImg from '../../assets/guigas-icon.jpg';
+import heroImg from '../../assets/foto-guilherme.jpeg';
 import CV from '../../assets/curriculo.pdf';
 import CVen from '../../assets/curriculo.pdf';
 import { useTheme } from '../../common/ThemeContext';
@@ -22,14 +22,17 @@ function Hero() {
         </button>
       </div>
 
-      <motion.img
-        src={heroImg}
-        alt="Foto de perfil"
-        className="mx-auto h-40 w-40 rounded-2xl object-cover ring-2 ring-primary-600 md:h-72 md:w-72"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      />
+      <div className="relative mx-auto h-44 w-44 overflow-hidden rounded-2xl ring-2 ring-primary-600 shadow-glow md:h-80 md:w-80 bg-ink">
+        <motion.img
+          src={heroImg}
+          alt="Foto de perfil"
+          className="h-full w-full object-cover object-center scale-[1.08]"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-primary-500/10 to-transparent" />
+      </div>
 
       <motion.div
         className="flex max-w-2xl flex-col items-center gap-6 text-center md:items-start md:text-left"
