@@ -3,15 +3,10 @@
     flex-direction: column;
     text-align: center;
   
-    img {
-      max-width: 250px;
-      align-self: center;
-      background-color: var(--project-card-bg);
-      border-radius: 20px;
-    }
+    img { max-width: 100%; }
   
     a {
-      width: 250px;
+      width: auto;
       text-decoration: none;
       color: #222;
       transition: transform 200ms ease-in-out;
@@ -23,17 +18,22 @@
   }
   
   .projectsContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 100px;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 16px;
+    align-items: start;
+    justify-items: center;
   }
   
   @media (width >= 800px) {
     .projectsContainer {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       padding: 0 30px;
+    }
+  }
+
+  @media (width >= 1200px) {
+    .projectsContainer {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
