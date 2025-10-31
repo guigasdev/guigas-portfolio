@@ -52,7 +52,7 @@ const resources = {
         items: [
           { name: 'Oracle Cloud Infrastructure Foundations Associate', org: 'Oracle', year: '2025', url: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=FCEE8273535928A350E98E77110502D5D61C051761BEA2CAA7A26A6A839EC1C2' },
           { name: 'Watsonx.AI Generative AI Foundations', org: 'IBM', year: '2025', url: 'https://www.credly.com/badges/2d4089f4-c7c2-4168-aeea-2104f40507e0' },
-          { name: 'Oracle Cloud Infrastructure Architect Associate', org: 'Oracle', year: '2025', url: 'https://soon...' },
+          { name: 'Oracle Cloud Infrastructure Architect Associate', org: 'Oracle', year: '2025', url: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=D75D4499FBF690A50292C68FAAD9458F4C2E1D4F19E8F595CD8DB85812D7C3D4' },
         ]
       },
       skills: {
@@ -129,7 +129,7 @@ const resources = {
         items: [
           { name: 'Oracle Cloud Infrastructure Foundations Associate', org: 'Oracle', year: '2025', url: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=FCEE8273535928A350E98E77110502D5D61C051761BEA2CAA7A26A6A839EC1C2' },
           { name: 'Watsonx.AI Generative AI Foundations', org: 'IBM', year: '2025', url: 'https://www.credly.com/badges/2d4089f4-c7c2-4168-aeea-2104f40507e0' },
-          { name: 'Oracle Cloud Infrastructure Architect Associate', org: 'Oracle', year: '2025', url: 'https://soon...' },
+          { name: 'Oracle Cloud Infrastructure Architect Associate', org: 'Oracle', year: '2025', url: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=D75D4499FBF690A50292C68FAAD9458F4C2E1D4F19E8F595CD8DB85812D7C3D4' },
         ]
       },
       skills: {
