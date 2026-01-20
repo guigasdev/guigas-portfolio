@@ -23,7 +23,18 @@ const resources = {
         arduino: { title: 'Robô Arduíno', desc: 'Seguidor, Bluetooth, Ultrassônico.', tech: ['C/C++', 'Arduino'] },
         listagreen: { title: 'Comunidade Lista Green', desc: 'Plataforma brasileira dedicada à economia verde.', tech: ['Next.js', 'Node.js', 'AWS'] },
         zabu: { title: 'Zabu Assistente de Discord', desc: 'Moderação, Assistência, Comandos.', tech: ['Python', 'Discord.py', 'Docker'] },
-        recipes: { title: 'Site de Receitas', desc: 'Criação, edição, comentários e avaliações de receitas.', tech: ['Django', 'PostgreSQL'] },
+        sumai: {
+          title: 'SumAI – Tradução e Sumarização de Textos',
+          desc: 'Aplicação cloud-native para tradução de textos e sumarização extrativa e abstrativa, utilizando serviços de IA da Azure, com deploy automatizado e arquitetura documentada.',
+          tech: [
+            'Python',
+            'Azure AI Foundry',
+            'Azure App Service',
+            'GitHub Actions',
+            'CI/CD',
+            'Streamlit'
+          ]
+        },
         bakery: { title: 'Sistema CRUD para Padaria ', desc: 'Crie, Leia, Atualize e Delete', tech: ['Java', 'Spring', 'MySQL'] },
         visionqa: { title: 'VisionQA', desc: 'Pipeline de OCR com IA no Azure: faça upload de imagens ou texto e obtenha respostas instantâneas.', tech: ['Azure', 'OCR', 'AI', 'Terraform', 'IaC', 'CI/CD', 'Full-Stack'] }
       },
@@ -101,7 +112,18 @@ const resources = {
         arduino: { title: 'Arduino Robot', desc: 'Line Follower, Bluetooth, Ultrasonic.', tech: ['C/C++', 'Arduino'] },
         listagreen: { title: 'Lista Green Community', desc: 'Brazilian platform dedicated to the green economy.', tech: ['Next.js', 'Node.js', 'AWS'] },
         zabu: { title: 'Zabu Discord Assistant', desc: 'Moderation, Assistance, Commands.', tech: ['Python', 'Discord.py', 'Docker'] },
-        recipes: { title: 'Recipe Website', desc: 'Create, edit, comment and rate recipes.', tech: ['Django', 'PostgreSQL'] },
+        sumai: {
+          title: 'SumAI – Text Translation and Summarization',
+          desc: 'Cloud-native application for text translation and extractive and abstractive summarization, using Azure AI services, with automated deploy and documented architecture.',
+          tech: [
+            'Python',
+            'Azure AI Foundry',
+            'Azure App Service',
+            'GitHub Actions',
+            'CI/CD',
+            'Streamlit'
+          ]
+        },
         bakery: { title: 'Bakery CRUD System', desc: 'Create, Read, Update and Delete', tech: ['Java', 'Spring', 'MySQL'] },
         visionqa: { title: 'VisionQA', desc: 'AI-powered OCR pipeline on Azure: upload images or text and get instant answers.', tech: ['Azure', 'OCR', 'AI', 'Terraform', 'IaC', 'CI/CD', 'Full-Stack'] },
       },

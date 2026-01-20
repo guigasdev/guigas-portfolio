@@ -2,7 +2,7 @@ import styles from './ProjectsStyle.module.css';
 import arduinoRobot from '../../assets/arduino-robot.jpg';
 import ProjectCard from '../../common/ProjectCard';
 import bakeCard from '../../assets/bake-cartoon-crud.jpg'
-import recipeCard from '../../assets/recipe-website-logo.jpg'
+import sumAiCard from '../../assets/sum-ai-card.png'
 import zabuCard from '../../assets/zabu-logo.png'
 import listaCard from '../../assets/image.png'
 import visionqa from '../../assets/visionqa.jpg'
@@ -46,11 +46,12 @@ function Projects() {
           tech={P.zabu.tech}
         />
         <ProjectCard
-          src={recipeCard}
-          link={'https://github.com/guigasdev/django-project-course'}
-          h3={P.recipes.title}
-          p={P.recipes.desc}
-          tech={P.recipes.tech}
+          src={sumAiCard}
+          link={'https://github.com/guigasdev/SumAI'}
+          site={'https://ai-sum.azurewebsites.net'}
+          h3={P.sumai.title}
+          p={P.sumai.desc}
+          tech={P.sumai.tech}
         />
         <ProjectCard
           src={bakeCard}
