@@ -7,69 +7,113 @@ import Contact from './sections/Contact/Contact';
 import Footer from './sections/Footer/Footer';
 import Experience from './sections/Experience/Experience';
 import Certifications from './sections/Certifications/Certifications';
+import Architectures from './sections/Architectures/Architectures';
+import { BrowserRouter, Routes, Route, NavLink, Link, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useTheme } from './common/ThemeContext';
+import { Sun, Moon } from 'lucide-react';
 
-function App() {
+// Scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
+function Layout({ children }) {
   const { t, i18n } = useTranslation();
-
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
-  };
-  const handleSmooth = (e) => {
-    e.preventDefault();
-    const href = e.currentTarget.getAttribute('href');
-    const target = document.querySelector(href);
-    if (!target) return;
-    const headerOffset = 72;
-    const rect = target.getBoundingClientRect();
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const top = rect.top + scrollTop - headerOffset;
-    window.scrollTo({ top, behavior: 'smooth' });
-  };
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="bg-ink text-slate-200">
+    <div className="flex min-h-screen flex-col bg-ink text-slate-200">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/80 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-          <a href="#hero" onClick={handleSmooth} className="font-display text-lg font-bold text-primary-400">GP</a>
+          <Link to="/" className="font-display text-lg font-bold text-primary-400">GP</Link>
           <div className="flex items-center gap-4 text-sm font-mono text-slate-300">
-            <a href="#experience" onClick={handleSmooth} className="hover:text-primary-400">{t('nav.experience')}</a>
-            <a href="#certifications" onClick={handleSmooth} className="hover:text-primary-400">{t('nav.certifications')}</a>
-            <a href="#projects" onClick={handleSmooth} className="hover:text-primary-400">{t('nav.projects')}</a>
-            <a href="#skills" onClick={handleSmooth} className="hover:text-primary-400">{t('nav.skills')}</a>
-            <a href="#contact" onClick={handleSmooth} className="hover:text-primary-400">{t('nav.contact')}</a>
-            <button
-              className="rounded-md border border-white/10 px-2 py-1 text-xs text-slate-300 hover:border-primary-500 hover:text-primary-400"
-              onClick={() => i18n.changeLanguage(i18n.language === 'pt' ? 'en' : 'pt')}
+            <NavLink 
+              to="/experience" 
+              className={({ isActive }) => `transition-colors hover:text-primary-400 ${isActive ? 'text-primary-400 underline decoration-2 underline-offset-4' : ''}`}
             >
-              {i18n.language === 'pt' ? 'PT' : 'EN'}
-            </button>
+              {t('nav.experience')}
+            </NavLink>
+            <NavLink 
+              to="/certifications" 
+              className={({ isActive }) => `transition-colors hover:text-primary-400 ${isActive ? 'text-primary-400 underline decoration-2 underline-offset-4' : ''}`}
+            >
+              {t('nav.certifications')}
+            </NavLink>
+            <NavLink 
+              to="/architectures" 
+              className={({ isActive }) => `transition-colors hover:text-primary-400 ${isActive ? 'text-primary-400 underline decoration-2 underline-offset-4' : ''}`}
+            >
+              {t('nav.architectures')}
+            </NavLink>
+            <NavLink 
+              to="/projects" 
+              className={({ isActive }) => `transition-colors hover:text-primary-400 ${isActive ? 'text-primary-400 underline decoration-2 underline-offset-4' : ''}`}
+            >
+              {t('nav.projects')}
+            </NavLink>
+            <NavLink 
+              to="/skills" 
+              className={({ isActive }) => `transition-colors hover:text-primary-400 ${isActive ? 'text-primary-400 underline decoration-2 underline-offset-4' : ''}`}
+            >
+              {t('nav.skills')}
+            </NavLink>
+            <NavLink 
+              to="/contact" 
+              className={({ isActive }) => `transition-colors hover:text-primary-400 ${isActive ? 'text-primary-400 underline decoration-2 underline-offset-4' : ''}`}
+            >
+              {t('nav.contact')}
+            </NavLink>
+            <div className="flex items-center gap-2 ml-2 pl-2 border-l border-white/10">
+              <button
+                aria-label="Alternar tema"
+                onClick={toggleTheme}
+                className="rounded-full p-1.5 text-slate-300 transition hover:bg-white/10 hover:text-primary-400"
+              >
+                {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+              </button>
+              <button
+                className="rounded-md border border-white/10 px-2 py-1 text-xs text-slate-300 hover:border-primary-500 hover:text-primary-400"
+                onClick={() => i18n.changeLanguage(i18n.language === 'pt' ? 'en' : 'pt')}
+              >
+                {i18n.language === 'pt' ? 'PT' : 'EN'}
+              </button>
+            </div>
           </div>
         </nav>
       </header>
 
-      <div className="space-y-24 md:space-y-36">
-        <div id="hero" className="scroll-mt-24">
-          <Hero />
-        </div>
-        <div id="experience" className="scroll-mt-24">
-          <Experience />
-        </div>
-        <div id="certifications" className="scroll-mt-24">
-          <Certifications />
-        </div>
-        <div id="projects" className="scroll-mt-24">
-          <Projects />
-        </div>
-        <div id="skills" className="scroll-mt-24">
-          <Skills />
-        </div>
-        <div id="contact" className="scroll-mt-24">
-          <Contact />
-        </div>
-        <Footer />
-      </div>
+      <main className="flex-grow py-12 md:py-20">
+        {children}
+      </main>
+
+      <Footer />
     </div>
   );
 }
 
-export default App
+function App() {
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/certifications" element={<Certifications />} />
+          <Route path="/architectures" element={<Architectures />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Hero />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
+  );
+}
+
+export default App;

@@ -1,27 +1,16 @@
 import heroImg from '../../assets/foto-guilherme.jpeg';
 import CV from '../../assets/curriculo.pdf';
 import CVen from '../../assets/curriculo.pdf';
-import { useTheme } from '../../common/ThemeContext';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Sun, Moon, FileDown } from 'lucide-react';
+import { Github, Linkedin, Mail, FileDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 function Hero() {
-  const { theme, toggleTheme } = useTheme();
   const { t } = useTranslation();
 
   return (
-    <section id="hero" className="relative mx-auto flex min-h-[80dvh] w-full max-w-6xl flex-col items-center justify-center gap-10 px-6 pt-16 md:min-h-[90dvh] md:flex-row-reverse">
-      <div className="absolute right-6 top-6 md:right-10 md:top-10">
-        <button
-          aria-label="Alternar tema"
-          onClick={toggleTheme}
-          className="rounded-full border border-white/10 bg-white/5 p-2 text-slate-200 shadow-glow backdrop-blur transition hover:bg-white/10"
-        >
-          {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-        </button>
-      </div>
-
+    <section id="hero" className="relative mx-auto flex min-h-[70dvh] w-full max-w-6xl flex-col items-center justify-center gap-10 px-6 md:min-h-[80dvh] md:flex-row-reverse">
       <div className="relative mx-auto h-44 w-44 overflow-hidden rounded-2xl ring-2 ring-primary-600 shadow-glow md:h-80 md:w-80 bg-ink">
         <motion.img
           src={heroImg}
@@ -64,11 +53,10 @@ function Hero() {
         <p className="max-w-xl text-slate-300">{t('hero.blurb')}</p>
 
         <div className="flex items-center gap-3">
-          <a href={(t && typeof t === 'function' && (/* noop */ true)) ? ( ( ( ) => null) ) : undefined} className="hidden"></a>
           <a href={ ( (lang) => lang === 'en' ? CVen : CV)( (typeof window !== 'undefined' && window.localStorage.getItem('i18nextLng')) || 'pt') } download className="btn">
             <FileDown className="mr-2" size={18} /> {t('buttons.downloadCV')}
           </a>
-          <a href="#contact" className="rounded-md border border-white/10 px-4 py-2 text-slate-200 transition hover:border-primary-500 hover:text-primary-400">{t('buttons.contactMe')}</a>
+          <Link to="/contact" className="rounded-md border border-white/10 px-4 py-2 text-slate-200 transition hover:border-primary-500 hover:text-primary-400">{t('buttons.contactMe')}</Link>
         </div>
       </motion.div>
     </section>

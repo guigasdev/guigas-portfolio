@@ -2,12 +2,4 @@
 #root {
   display: flex;
   flex-direction: column;
-  gap: 60px;
-}
-
-@media (width >= 800px) {
-  #root { gap: 100px; }
-  @media (width >= 1400px) {
-    #root { gap: 200px; }
-  }
 }
