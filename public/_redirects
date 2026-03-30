@@ -1,0 +1,6 @@
+/*
+  Redireciona todas as rotas para o index.html.
+  Isso permite que o React Router gerencie as rotas no lado do cliente
+  mesmo após um refresh (F5).
+*/
+/*  /index.html  200
